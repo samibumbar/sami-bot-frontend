@@ -13,7 +13,7 @@ export const useChat = () => {
     const fetchMessages = async () => {
       try {
         const response = await axios.get(
-          "https://samibumbar.github.io/sami-bot-frontend/chat/messages"
+          "https://bot-backend-h9da.onrender.com/chat/messages"
         );
         setMessages(response.data);
       } catch (error) {
@@ -29,7 +29,7 @@ export const useChat = () => {
 
     try {
       const response = await axios.post(
-        "https://samibumbar.github.io/sami-bot-frontend/chat/message",
+        "https://bot-backend-h9da.onrender.com/chat/messages",
         {
           question: text,
         }
