@@ -12,7 +12,9 @@ export const useChat = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await axios.get("http://localhost:3003/chat/messages");
+        const response = await axios.get(
+          "https://samibumbar.github.io/sami-bot-frontend/chat/messages"
+        );
         setMessages(response.data);
       } catch (error) {
         console.error("Error fetching messages:", error);
@@ -26,9 +28,12 @@ export const useChat = () => {
     setMessages((prev) => [...prev, userMessage]);
 
     try {
-      const response = await axios.post("http://localhost:3003/chat/message", {
-        question: text,
-      });
+      const response = await axios.post(
+        "https://samibumbar.github.io/sami-bot-frontend/chat/message",
+        {
+          question: text,
+        }
+      );
 
       const botMessage: Message = {
         sender: "bot",

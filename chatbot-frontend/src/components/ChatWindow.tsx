@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Message from "./Message";
 import InputBar from "./InputBar";
 import { useChat } from "../hooks/useChat";
