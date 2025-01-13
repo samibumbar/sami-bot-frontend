@@ -29,7 +29,7 @@ export const useChat = () => {
 
     try {
       const response = await axios.post(
-        "https://bot-backend-h9da.onrender.com/chat/messages",
+        "https://bot-backend-h9da.onrender.com/chat/message",
         {
           question: text,
         }
